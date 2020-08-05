@@ -1,0 +1,12 @@
+
+#
+# This snippet should be appended to /etc/apache2/apache2.conf
+# to enable cgi scripts in the user directory
+# (the "AddHandler ... " lines may be optional)
+#
+<Directory /home/pi/public_html/cgi-bin>
+        Options ExecCGI
+        SetHandler cgi-script
+        AddHandler cgi-script .py
+        AddHandler cgi-script .sh
+</Directory>
